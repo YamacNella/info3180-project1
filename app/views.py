@@ -74,7 +74,7 @@ def profiles():
         if not profiles:
             flash('No users to show.', 'danger')
             return redirect(url_for('add_profile'))
-        return render_template('profiles_listing.html', profiles=profiles)
+        return render_template('profiles_list.html', profiles=profiles)
     
 @app.route('/profile/<userid>', methods=['GET','POST'])
 def view_profile(userid):
